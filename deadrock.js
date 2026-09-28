@@ -151,7 +151,7 @@
   const guideLabels = [
     { eyebrow: 'START TIME', title: '공연 시작' },
     { eyebrow: 'SEATING', title: '관람 형태' },
-    { eyebrow: 'UPDATES', title: '추가 안내' }
+    { eyebrow: 'UPDATES', title: '주차 안내' }
   ];
 
   const noticeList = document.querySelector('#notice-list');
