@@ -78,7 +78,7 @@ Use [`event-data.js`](./event-data.js) for timetable, acts, songs, credits, and 
 
 - **Event facts lead.** Korean event information uses Pretendard for readable mobile scanning.
 - **Terminal syntax supports.** `mysql>` and `$ cat ~/…` are atmosphere, not primary information.
-- **DEADROCK stays loud.** Lime is reserved for system/status accents; orange-red is reserved for the deadlock error and active navigation state.
+- **DEADROCK stays loud.** Lime is reserved for system/status accents and the active navigation state; orange-red is reserved for the deadlock error and glitch offsets.
 - **Small-screen first.** The desktop canvas preserves a centered mobile-readable event guide.
 
 ---
