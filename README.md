@@ -29,7 +29,7 @@ try restarting transaction._
 | --- | --- |
 | **DATE** | 2026년 10월 31일 토요일 |
 | **DOORS** | 17:00 |
-| **SHOW** | 17:10 — 19:45 |
+| **SHOW** | 17:10 — 20:00 |
 | **LINEUP** | START-UP × 클클밴드 |
 | **VENUE** | 신촌 스팀펑크락 라이브펍 B1 |
 
@@ -39,7 +39,7 @@ try restarting transaction._
 17:00 — 17:10   입장
 17:10 — 17:50   START-UP
 17:50 — 18:10   INTERMISSION
-18:10 — 19:45   클클밴드
+18:10 — 20:00   클클밴드
 ```
 
 ## Live site

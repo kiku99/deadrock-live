@@ -137,9 +137,9 @@ window.EVENT_DATA = {
     },
     {
       time: "18:10",
-      endTime: "19:45",
+      endTime: "20:00",
       title: "클클밴드",
-      detail: "95분 공연",
+      detail: "110분 공연",
       type: "performance"
     }
   ],
@@ -200,8 +200,8 @@ window.EVENT_DATA = {
       order: "두 번째 무대",
       name: "클클밴드",
       headcount: 14,
-      time: "18:10 — 19:45",
-      duration: "95분",
+      time: "18:10 — 20:00",
+      duration: "110분",
       songs: [
         {
           order: 1,
