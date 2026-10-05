@@ -36,6 +36,20 @@
     node.textContent = formatEventDate(node.dataset.eventDate);
   });
 
+  const schedule = data.schedule ?? [];
+  const doorTime = schedule.find((item) => item.type === 'door')?.time ?? '';
+  const startTime = schedule.find((item) => item.type === 'performance')?.time ?? '';
+  const endTime = schedule.at(-1)?.endTime ?? '';
+  const timeFormats = {
+    facts: `입장 ${doorTime} · 공연 ${startTime}`,
+    end: `공연 종료 예정 ${endTime}`,
+    dock: `${startTime} START`
+  };
+
+  document.querySelectorAll('[data-event-time]').forEach((node) => {
+    node.textContent = timeFormats[node.dataset.eventTime] ?? '';
+  });
+
   const venue = data.event?.venue;
   const formatVenue = (format) => {
     if (!venue) return '';
