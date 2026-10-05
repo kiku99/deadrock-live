@@ -235,17 +235,17 @@ window.EVENT_DATA = {
         },
         {
           order: 6,
-          title: "yellow",
-          originalArtist: "Coldplay",
-          videoUrl: "https://www.youtube.com/watch?v=yKNxeF4KMsY",
-          sessions: CLOUD_CLUB_BAND_SESSIONS.yellow
-        },
-        {
-          order: 7,
           title: "if i had a gun",
           originalArtist: "Noel Gallagher's High Flying Birds",
           videoUrl: "https://www.youtube.com/watch?v=1NMUDb3Ewhs",
           sessions: CLOUD_CLUB_BAND_SESSIONS.ifIHadAGun
+        },
+        {
+          order: 7,
+          title: "yellow",
+          originalArtist: "Coldplay",
+          videoUrl: "https://www.youtube.com/watch?v=yKNxeF4KMsY",
+          sessions: CLOUD_CLUB_BAND_SESSIONS.yellow
         },
         {
           order: 11,
