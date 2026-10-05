@@ -157,7 +157,6 @@ window.EVENT_DATA = {
           order: 1,
           title: "안녕 (Hello)",
           originalArtist: "조이",
-          duration: "4:00",
           videoUrl: "https://www.youtube.com/watch?v=lNvBbh5jDcA",
           sessions: START_UP_SESSIONS
         },
@@ -166,14 +165,12 @@ window.EVENT_DATA = {
           title: "???",
           hint: "3초 메모리",
           secret: true,
-          duration: "3:30",
           sessions: START_UP_SESSIONS
         },
         {
           order: 3,
           title: "ㅈㅣㅂ",
           originalArtist: "한로로",
-          duration: "4:00",
           videoUrl: "https://www.youtube.com/watch?v=U4-cz9NHQv4",
           sessions: START_UP_SESSIONS
         },
@@ -182,7 +179,6 @@ window.EVENT_DATA = {
           title: "???",
           hint: "알콜 샤워",
           secret: true,
-          duration: "7:30",
           sessions: START_UP_SESSIONS
         },
         {
@@ -190,7 +186,6 @@ window.EVENT_DATA = {
           title: "???",
           hint: "합계 46",
           secret: true,
-          duration: "5:00",
           sessions: START_UP_SESSIONS
         }
       ]
