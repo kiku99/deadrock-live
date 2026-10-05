@@ -9,6 +9,7 @@
 *.png
 *.jpg
 *.jpeg
+!og.png
 
 # Node dependencies and logs
 node_modules/
