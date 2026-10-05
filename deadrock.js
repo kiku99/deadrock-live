@@ -42,7 +42,6 @@
 
     const formats = {
       name: venue.name,
-      label: venue.label,
       'address-short': venue.addressShort,
       'address-with-floor': venue.addressWithFloor,
       subway: venue.directions.subway,

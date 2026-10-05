@@ -9,7 +9,6 @@ const EVENT_DATE = Object.freeze({
 const EVENT_VENUE = Object.freeze({
   name: "신촌 스팀펑크락 라이브펍 B1",
   titleLines: ["신촌 스팀펑크락", "라이브펍"],
-  label: "B1 · SINCHON",
   addressShort: "서울 서대문구 연세로9길 13",
   addressWithFloor: "서울 서대문구 연세로9길 13 · 지하 1층",
   mapUrl: "https://naver.me/GdT4kvAi",
