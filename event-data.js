@@ -248,7 +248,7 @@ window.EVENT_DATA = {
         {
           order: 7,
           title: "if i had a gun",
-          originalArtist: "노엘 갤러거스 하이 플라잉 버즈 (Noel Gallagher's High Flying Birds)",
+          originalArtist: "노엘 갤러거 (Noel Gallagher)",
           videoUrl: "https://www.youtube.com/watch?v=1NMUDb3Ewhs",
           sessions: CLOUD_CLUB_BAND_SESSIONS.ifIHadAGun
         },
