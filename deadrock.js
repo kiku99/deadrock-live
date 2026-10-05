@@ -203,8 +203,20 @@
     }, 40);
   };
 
+  const replayClass = (node, className, duration) => {
+    node.classList.remove(className);
+    void node.offsetWidth;
+    node.classList.add(className);
+    node.effectTimers ??= {};
+    window.clearTimeout(node.effectTimers[className]);
+    node.effectTimers[className] = window.setTimeout(() => node.classList.remove(className), duration);
+  };
+  const glitchLabel = (link) => {
+    replayClass(link, 'is-glitching', 420);
+    scrambleLabel(link);
+  };
+
   let activeLink = null;
-  let glitchTimer;
   let navLockedUntil = 0;
   const moveIndicator = () => {
     if (!activeLink) return;
@@ -227,12 +239,8 @@
       return;
     }
     if (reducedMotion) return;
-    sectionNav.classList.remove('is-glitching');
-    void sectionNav.offsetWidth;
-    sectionNav.classList.add('is-glitching');
-    window.clearTimeout(glitchTimer);
-    glitchTimer = window.setTimeout(() => sectionNav.classList.remove('is-glitching'), 450);
-    scrambleLabel(link);
+    replayClass(sectionNav, 'is-glitching', 450);
+    glitchLabel(link);
   };
 
   const updateActiveSection = () => {
@@ -259,6 +267,18 @@
   window.addEventListener('scroll', updateActiveSection, { passive: true });
   window.addEventListener('scroll', updateHeader, { passive: true });
   window.addEventListener('resize', moveIndicator);
+
+  const scheduleGlitch = () => {
+    window.setTimeout(() => {
+      if (!document.hidden) {
+        const link = sectionLinks[Math.floor(Math.random() * sectionLinks.length)];
+        glitchLabel(link);
+        if (link === activeLink) replayClass(sectionNav, 'is-flickering', 420);
+      }
+      scheduleGlitch();
+    }, 2500 + Math.random() * 4500);
+  };
+  if (sectionNav && !reducedMotion) scheduleGlitch();
   document.fonts?.ready.then(moveIndicator);
   updateActiveSection();
   updateHeader();
