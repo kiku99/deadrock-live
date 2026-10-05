@@ -148,20 +148,14 @@
 
   bandList.innerHTML = panels;
 
-  const guideLabels = [
-    { eyebrow: 'START TIME', title: '공연 시작' },
-    { eyebrow: 'SEATING', title: '관람 형태' },
-    { eyebrow: 'UPDATES', title: '주차 안내' }
-  ];
-
   const noticeList = document.querySelector('#notice-list');
   noticeList.innerHTML = data.notices.map((notice, index) => `
     <article class="guide-item">
       <div class="guide-static">
         <span>${String(index + 1).padStart(2, '0')}</span>
-        <div><small>${guideLabels[index]?.eyebrow ?? 'NOTICE'}</small><strong>${guideLabels[index]?.title ?? '공연 안내'}</strong></div>
+        <div><small>${escapeHtml(notice.eyebrow ?? 'NOTICE')}</small><strong>${escapeHtml(notice.title ?? '공연 안내')}</strong></div>
       </div>
-      <p>${escapeHtml(notice)}</p>
+      <p>${escapeHtml(notice.text)}</p>
     </article>
   `).join('');
 
