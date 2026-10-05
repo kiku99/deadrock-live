@@ -236,14 +236,14 @@ window.EVENT_DATA = {
         {
           order: 6,
           title: "yellow",
-          originalArtist: "콜드플레이 (Coldplay)",
+          originalArtist: "Coldplay",
           videoUrl: "https://www.youtube.com/watch?v=yKNxeF4KMsY",
           sessions: CLOUD_CLUB_BAND_SESSIONS.yellow
         },
         {
           order: 7,
           title: "if i had a gun",
-          originalArtist: "노엘 갤러거 (Noel Gallagher)",
+          originalArtist: "Noel Gallagher's High Flying Birds",
           videoUrl: "https://www.youtube.com/watch?v=1NMUDb3Ewhs",
           sessions: CLOUD_CLUB_BAND_SESSIONS.ifIHadAGun
         },
@@ -257,7 +257,7 @@ window.EVENT_DATA = {
         {
           order: 8,
           title: "pretender",
-          originalArtist: "오피셜히게단디즘 (Official髭男dism)",
+          originalArtist: "Official髭男dism",
           videoUrl: "https://www.youtube.com/watch?v=TQ8WlA2GXbk",
           sessions: CLOUD_CLUB_BAND_SESSIONS.pretender
         },
