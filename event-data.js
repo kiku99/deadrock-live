@@ -200,9 +200,9 @@ window.EVENT_DATA = {
       songs: [
         {
           order: 1,
-          title: "사랑은 열린 문",
-          originalArtist: "박지윤, 윤승욱 (겨울왕국 OST)",
-          videoUrl: "https://www.youtube.com/watch?v=kUonnsz5M3w",
+          title: "love is an open door",
+          originalArtist: "Kristen Bell, Santino Fontana (Frozen)",
+          videoUrl: "https://www.youtube.com/watch?v=kQDw88hEr2c",
           sessions: CLOUD_CLUB_BAND_SESSIONS.loveIsAnOpenDoor
         },
         {
