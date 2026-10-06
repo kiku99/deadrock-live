@@ -42,7 +42,6 @@
 
     const formats = {
       name: venue.name,
-      label: venue.label,
       'address-short': venue.addressShort,
       'address-with-floor': venue.addressWithFloor,
       subway: venue.directions.subway,
@@ -165,42 +164,125 @@
     </article>
   `).join('');
 
+  // Keep motion decorative: content is visible without JavaScript or reduced motion.
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const sectionNav = document.querySelector('.section-nav');
   const sectionLinks = [...document.querySelectorAll('.section-nav a')];
   const sectionTargets = sectionLinks
     .map((link) => document.querySelector(link.getAttribute('href')))
     .filter(Boolean);
 
+  const navIndicator = document.createElement('span');
+  const navFx = document.createElement('span');
+  navIndicator.className = 'nav-indicator';
+  navFx.className = 'nav-fx';
+  [navIndicator, navFx].forEach((node) => node.setAttribute('aria-hidden', 'true'));
+  sectionNav?.prepend(navFx, navIndicator);
+  sectionLinks.forEach((link) => {
+    link.dataset.label = link.textContent;
+    link.setAttribute('aria-label', link.textContent);
+  });
+
+  const scrambleGlyphs = '#$%&@!?/<>01';
+  const scrambleLabel = (link) => {
+    const label = link.dataset.label;
+    const frames = 8;
+    let frame = 0;
+    window.clearInterval(link.scrambleTimer);
+    link.scrambleTimer = window.setInterval(() => {
+      frame += 1;
+      const settled = Math.floor(label.length * frame / frames);
+      link.textContent = [...label]
+        .map((char, index) => (index < settled ? char : scrambleGlyphs[Math.floor(Math.random() * scrambleGlyphs.length)]))
+        .join('');
+      if (frame >= frames) {
+        window.clearInterval(link.scrambleTimer);
+        link.textContent = label;
+      }
+    }, 40);
+  };
+
+  const replayClass = (node, className, duration) => {
+    node.classList.remove(className);
+    void node.offsetWidth;
+    node.classList.add(className);
+    node.effectTimers ??= {};
+    window.clearTimeout(node.effectTimers[className]);
+    node.effectTimers[className] = window.setTimeout(() => node.classList.remove(className), duration);
+  };
+  const glitchLabel = (link) => {
+    replayClass(link, 'is-glitching', 420);
+    scrambleLabel(link);
+  };
+
+  let activeLink = null;
+  let navLockedUntil = 0;
+  const moveIndicator = () => {
+    if (!activeLink) return;
+    navIndicator.style.translate = `${activeLink.offsetLeft}px 0`;
+    navIndicator.style.width = `${activeLink.offsetWidth}px`;
+  };
+  const setActiveLink = (link) => {
+    if (!link || link === activeLink) return;
+    const isFirst = !activeLink;
+    activeLink = link;
+    sectionLinks.forEach((item) => {
+      const selected = item === link;
+      item.classList.toggle('is-active', selected);
+      if (selected) item.setAttribute('aria-current', 'location');
+      else item.removeAttribute('aria-current');
+    });
+    moveIndicator();
+    if (isFirst) {
+      window.requestAnimationFrame(() => sectionNav?.classList.add('is-ready'));
+      return;
+    }
+    if (reducedMotion) return;
+    replayClass(sectionNav, 'is-glitching', 450);
+    glitchLabel(link);
+  };
+
   const updateActiveSection = () => {
+    if (Date.now() < navLockedUntil) return;
     const marker = window.scrollY + Math.min(window.innerHeight * .45, 380);
     let activeId = sectionTargets[0]?.id;
     sectionTargets.forEach((section) => {
       if (section.offsetTop <= marker) activeId = section.id;
     });
-    sectionLinks.forEach((link) => {
-      const selected = link.getAttribute('href') === `#${activeId}`;
-      link.classList.toggle('is-active', selected);
-      if (selected) link.setAttribute('aria-current', 'location');
-      else link.removeAttribute('aria-current');
-    });
+    setActiveLink(sectionLinks.find((link) => link.getAttribute('href') === `#${activeId}`));
   };
 
   sectionLinks.forEach((link) => {
     link.addEventListener('click', () => {
-      sectionLinks.forEach((item) => {
-        item.classList.toggle('is-active', item === link);
-        item.removeAttribute('aria-current');
-      });
-      link.setAttribute('aria-current', 'location');
+      navLockedUntil = Date.now() + 1000;
+      setActiveLink(link);
     });
+  });
+  window.addEventListener('scrollend', () => {
+    navLockedUntil = 0;
+    updateActiveSection();
   });
   const updateHeader = () => document.body.classList.toggle('is-scrolled', window.scrollY > 10);
   window.addEventListener('scroll', updateActiveSection, { passive: true });
   window.addEventListener('scroll', updateHeader, { passive: true });
+  window.addEventListener('resize', moveIndicator);
+
+  const scheduleGlitch = () => {
+    window.setTimeout(() => {
+      if (!document.hidden) {
+        const link = sectionLinks[Math.floor(Math.random() * sectionLinks.length)];
+        glitchLabel(link);
+        if (link === activeLink) replayClass(sectionNav, 'is-flickering', 420);
+      }
+      scheduleGlitch();
+    }, 2500 + Math.random() * 4500);
+  };
+  if (sectionNav && !reducedMotion) scheduleGlitch();
+  document.fonts?.ready.then(moveIndicator);
   updateActiveSection();
   updateHeader();
 
-  // Keep motion decorative: content is visible without JavaScript or reduced motion.
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const bootNodes = [...document.querySelectorAll('.terminal-log > span, .terminal-log > .boot-logo')];
   const pause = (milliseconds) => new Promise((resolve) => window.setTimeout(resolve, milliseconds));
   const playTerminalBoot = async () => {

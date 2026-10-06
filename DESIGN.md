@@ -4,6 +4,7 @@ name: Deadrock Live
 summary: "A restrained terminal UI for a live concert page: deep black-green surfaces, off-white information, lime interaction, and orange-red failures."
 colors:
   primary: "#B8FF72"
+  primary-alt: "#79FF9A"
   canvas: "#050806"
   base: "#0D1110"
   surface: "#121916"
@@ -46,7 +47,8 @@ This concert uses terminal language as information architecture, not as a neon g
 ## Colors
 
 - **Lime `#B8FF72`:** only interactive/selected states and SQL emphasis.
-- **Orange-red `#FF5B35`:** only errors and the crossed-out `L` in the DEADROCK logo.
+- **Orange-red `#FF5B35`:** only errors, the crossed-out `L` in the DEADROCK logo, and glitch offsets in the section nav.
+- **Mint `#79FF9A`:** only the `R` in the DEADROCK logo and the RGB-split offset in the section nav.
 - **YouTube red `#FF3B30`:** YouTube mark only.
 - **Neutral surfaces:** use only canvas, base, and surface levels. Do not add component-specific dark greens.
 - **Typography:** use primary and secondary tokens only. Do not use purple or decorative orange labels.
@@ -65,7 +67,8 @@ TUI elements use square corners. Borders are 1px `border`.
 
 ## Components
 
-- Selected tab, open-state control, and main CTA use lime with dark text.
+- Open-state control and main CTA use lime with dark text.
+- The section nav is a lime hologram: scanlines and a sweeping sheen on the bar, an angled translucent lime panel behind the selected item, and a short glitch (label scramble with orange-red and mint offsets) when the selection changes or at random intervals. All of it stops under reduced motion.
 - Error output uses orange-red text on a dark surface.
 - Every normal row uses the shared surface and border values.
 
