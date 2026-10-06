@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#16151a">
   <meta property="og:title" content="데드락도 락이다">
+  <meta name="description" content="START-UP × 클클밴드 · 2026.10.31 · 신촌 스팀펑크락 라이브펍">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deadrock-live.vercel.app">
   <meta property="og:description" content="START-UP × 클클밴드 · 2026.10.31 · 신촌">
+  <meta property="og:image" content="https://deadrock-live.vercel.app/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <title>데드락도 락이다</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="mask-icon" href="favicon.svg" color="#b8ff72">
@@ -75,7 +82,7 @@
         </div>
         <div>
           <dt><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></svg><span>TIME</span></dt>
-          <dd><strong>입장 17:00 · 공연 17:10</strong><span>공연 종료 예정 19:45</span></dd>
+          <dd><strong data-event-time="facts"></strong><span data-event-time="end"></span></dd>
         </div>
         <div>
           <dt><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>PLACE</span></dt>
@@ -140,7 +147,7 @@
   </footer>
 
   <aside class="bottom-dock" aria-label="공연 핵심 행동">
-    <div><span data-event-date="hero"></span><strong>17:10 START</strong></div>
+    <div><span data-event-date="hero"></span><strong data-event-time="dock"></strong></div>
     <a data-event-venue-map target="_blank" rel="noopener noreferrer">장소 보기</a>
   </aside>
 

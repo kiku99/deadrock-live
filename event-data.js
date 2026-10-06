@@ -136,9 +136,9 @@ window.EVENT_DATA = {
     },
     {
       time: "18:10",
-      endTime: "19:45",
+      endTime: "20:00",
       title: "클클밴드",
-      detail: "95분 공연",
+      detail: "110분 공연",
       type: "performance"
     }
   ],
@@ -194,8 +194,8 @@ window.EVENT_DATA = {
       order: "두 번째 무대",
       name: "클클밴드",
       headcount: 14,
-      time: "18:10 — 19:45",
-      duration: "95분",
+      time: "18:10 — 20:00",
+      duration: "110분",
       songs: [
         {
           order: 1,
@@ -286,9 +286,25 @@ window.EVENT_DATA = {
   ],
 
   notices: [
-    "공연은 17시 10분에 시작합니다. 원활한 관람을 위해 입장 시간에 맞춰 와주세요.",
-    "공연장은 스탠딩 관람으로 운영되며 좌석은 제공되지 않습니다.",
-    "공연장 주차는 어렵습니다. 대중교통 이용을 권장합니다.",
-    "식음료 반입은 불가하며, 매장 내에서 음료를 판매합니다."
+    {
+      eyebrow: "START TIME",
+      title: "공연 시작",
+      text: "공연은 17시 10분에 시작합니다. 원활한 관람을 위해 입장 시간에 맞춰 와주세요."
+    },
+    {
+      eyebrow: "SEATING",
+      title: "관람 형태",
+      text: "공연장은 스탠딩 관람으로 운영되며 좌석은 제공되지 않습니다."
+    },
+    {
+      eyebrow: "PARKING",
+      title: "주차 안내",
+      text: "공연장 주차는 어렵습니다. 대중교통 이용을 권장합니다."
+    },
+    {
+      eyebrow: "FOOD & DRINK",
+      title: "식음료",
+      text: "식음료 반입은 불가하며, 매장 내에서 음료를 판매합니다."
+    }
   ]
 };
