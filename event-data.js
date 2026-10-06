@@ -28,7 +28,7 @@ const START_UP_SESSIONS = [
 ];
 
 const CLOUD_CLUB_BAND_SESSIONS = {
-  doorLock: [
+  loveIsAnOpenDoor: [
             { role: "VOCAL", names: ["박시윤", "최재혁"] },
             { role: "DRUM", names: ["원준영"] },
             { role: "BASS", names: ["김화균"] },
@@ -60,13 +60,13 @@ const CLOUD_CLUB_BAND_SESSIONS = {
             { role: "GUITAR", names: ["김재현"] },
             { role: "KEYBOARD", names: ["우다현"] }
   ],
-  bananaHighlighter: [
+  yellow: [
             { role: "VOCAL", names: ["김재현"] },
             { role: "DRUM", names: ["정민혁"] },
             { role: "BASS", names: ["인승진"] },
             { role: "GUITAR", names: ["신웅비", "김재현"] }
   ],
-  belongingsInspection: [
+  ifIHadAGun: [
             { role: "VOCAL", names: ["김재현"] },
             { role: "DRUM", names: ["원준영"] },
             { role: "BASS", names: ["김화균"] },
@@ -156,7 +156,6 @@ window.EVENT_DATA = {
           order: 1,
           title: "안녕 (Hello)",
           originalArtist: "조이",
-          duration: "4:00",
           videoUrl: "https://www.youtube.com/watch?v=lNvBbh5jDcA",
           sessions: START_UP_SESSIONS
         },
@@ -165,14 +164,12 @@ window.EVENT_DATA = {
           title: "???",
           hint: "3초 메모리",
           secret: true,
-          duration: "3:30",
           sessions: START_UP_SESSIONS
         },
         {
           order: 3,
           title: "ㅈㅣㅂ",
           originalArtist: "한로로",
-          duration: "4:00",
           videoUrl: "https://www.youtube.com/watch?v=U4-cz9NHQv4",
           sessions: START_UP_SESSIONS
         },
@@ -181,7 +178,6 @@ window.EVENT_DATA = {
           title: "???",
           hint: "알콜 샤워",
           secret: true,
-          duration: "7:30",
           sessions: START_UP_SESSIONS
         },
         {
@@ -189,7 +185,6 @@ window.EVENT_DATA = {
           title: "???",
           hint: "합계 46",
           secret: true,
-          duration: "5:00",
           sessions: START_UP_SESSIONS
         }
       ]
@@ -204,10 +199,10 @@ window.EVENT_DATA = {
       songs: [
         {
           order: 1,
-          title: "???",
-          hint: "문단속 실패",
-          secret: true,
-          sessions: CLOUD_CLUB_BAND_SESSIONS.doorLock
+          title: "love is an open door",
+          originalArtist: "Kristen Bell, Santino Fontana (Frozen)",
+          videoUrl: "https://www.youtube.com/watch?v=kQDw88hEr2c",
+          sessions: CLOUD_CLUB_BAND_SESSIONS.loveIsAnOpenDoor
         },
         {
           order: 3,
@@ -239,17 +234,17 @@ window.EVENT_DATA = {
         },
         {
           order: 6,
-          title: "???",
-          hint: "바나나 형광펜",
-          secret: true,
-          sessions: CLOUD_CLUB_BAND_SESSIONS.bananaHighlighter
+          title: "if i had a gun",
+          originalArtist: "Noel Gallagher's High Flying Birds",
+          videoUrl: "https://www.youtube.com/watch?v=1NMUDb3Ewhs",
+          sessions: CLOUD_CLUB_BAND_SESSIONS.ifIHadAGun
         },
         {
           order: 7,
-          title: "???",
-          hint: "소지품 검사 예정",
-          secret: true,
-          sessions: CLOUD_CLUB_BAND_SESSIONS.belongingsInspection
+          title: "yellow",
+          originalArtist: "Coldplay",
+          videoUrl: "https://www.youtube.com/watch?v=yKNxeF4KMsY",
+          sessions: CLOUD_CLUB_BAND_SESSIONS.yellow
         },
         {
           order: 11,
@@ -261,7 +256,7 @@ window.EVENT_DATA = {
         {
           order: 8,
           title: "pretender",
-          originalArtist: "오피셜히게단디즘 (Official髭男dism)",
+          originalArtist: "Official髭男dism",
           videoUrl: "https://www.youtube.com/watch?v=TQ8WlA2GXbk",
           sessions: CLOUD_CLUB_BAND_SESSIONS.pretender
         },
