@@ -44,9 +44,9 @@ try restarting transaction._
 
 ## Live site
 
-[https://deadrock-live.vercel.app](https://deadrock-live.vercel.app)
+[https://kungbi.github.io/deadrock-live/](https://kungbi.github.io/deadrock-live/)
 
-`main` 브랜치에 푸시하면 Vercel Production 배포가 자동으로 시작됩니다.
+`main` 브랜치에 푸시하면 GitHub Pages에 자동으로 배포됩니다.
 
 ## Run locally
 
