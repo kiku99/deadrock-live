@@ -45,7 +45,7 @@ const CLOUD_CLUB_BAND_SESSIONS = {
             { role: "DRUM", names: ["원준영"] },
             { role: "BASS", names: ["김화균"] },
             { role: "GUITAR", names: ["김재현"] },
-            { role: "TBA", names: ["장민호"] }
+            { role: "KEYBOARD", names: ["장민호"] }
   ],
   stellarCommunication: [
             { role: "VOCAL", names: ["최재혁"] },
@@ -74,30 +74,31 @@ const CLOUD_CLUB_BAND_SESSIONS = {
             { role: "KEYBOARD", names: ["우다현"] }
   ],
   erebia: [
+            { role: "VOCAL", names: ["윤민섭"] },
             { role: "DRUM", names: ["양효빈"] },
             { role: "BASS", names: ["이해준"] },
-            { role: "GUITAR", names: ["신웅비", "김재현"] },
-            { role: "TBA", names: ["윤민섭"] }
+            { role: "GUITAR", names: ["신웅비", "김재현"] }
   ],
   pretender: [
+            { role: "VOCAL", names: ["장민호", "윤민섭"] },
             { role: "DRUM", names: ["정민혁"] },
             { role: "BASS", names: ["김화균"] },
             { role: "GUITAR", names: ["신웅비", "임유빈"] },
-            { role: "KEYBOARD", names: ["우다현"] },
-            { role: "TBA", names: ["장민호", "윤민섭"] }
+            { role: "KEYBOARD", names: ["우다현"] }
   ],
   confession: [
+            { role: "VOCAL", names: ["윤민섭"] },
             { role: "DRUM", names: ["정민혁"] },
             { role: "BASS", names: ["인승진"] },
             { role: "GUITAR", names: ["신웅비", "임유빈"] },
-            { role: "TBA", names: ["윤민섭", "장민호"] }
+            { role: "KEYBOARD", names: ["장민호"] }
   ],
   monsoon: [
+            { role: "VOCAL", names: ["윤민섭"] },
             { role: "DRUM", names: ["양효빈"] },
             { role: "BASS", names: ["인승진"] },
             { role: "GUITAR", names: ["김재현"] },
-            { role: "KEYBOARD", names: ["우다현"] },
-            { role: "TBA", names: ["윤민섭"] }
+            { role: "KEYBOARD", names: ["우다현"] }
   ],
   shakingTime: [
             { role: "VOCAL", names: ["최재혁"] },
