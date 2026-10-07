@@ -58,7 +58,7 @@ const CLOUD_CLUB_BAND_SESSIONS = {
             { role: "DRUM", names: ["원준영"] },
             { role: "BASS", names: ["인승진"] },
             { role: "GUITAR", names: ["김재현"] },
-            { role: "KEYBOARD", names: ["우다현"] }
+            { role: "KEYBOARD", names: ["장민호"] }
   ],
   yellow: [
             { role: "VOCAL", names: ["김재현"] },
